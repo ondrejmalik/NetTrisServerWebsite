@@ -39,3 +39,4 @@ A:\Projects\NetTrisServerWebsite\NetTrisServerWebsite\bin\Debug\net8.0\Microsoft
 A:\Projects\NetTrisServerWebsite\NetTrisServerWebsite\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 A:\Projects\NetTrisServerWebsite\NetTrisServerWebsite\obj\Debug\net8.0\NetTrisServerWebsite.csproj.AssemblyReference.cache
 A:\Projects\NetTrisServerWebsite\NetTrisServerWebsite\obj\Debug\net8.0\NetTrisServerWebsite.csproj.CopyComplete
+A:\Projects\NetTrisServerWebsite\NetTrisServerWebsite\obj\Debug\net8.0\NetTrisServerWebsite.sourcelink.json

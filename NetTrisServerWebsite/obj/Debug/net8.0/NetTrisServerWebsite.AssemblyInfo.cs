@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NetTrisServerWebsite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+192aa97580523e2ca7242860e7b9aaed8287e361")]
 [assembly: System.Reflection.AssemblyProductAttribute("NetTrisServerWebsite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NetTrisServerWebsite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

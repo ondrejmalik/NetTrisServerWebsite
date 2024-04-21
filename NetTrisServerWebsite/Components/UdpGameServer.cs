@@ -16,6 +16,9 @@ public class UdpGameServer
     private Action _msPrint;
     public int CurrentCientCount => Clients.Count - _disconnectedClients;
 
+    /// <summary>
+    /// Sets values and starts the game server.
+    /// </summary>
     public void Start()
     {
         SetPort();
@@ -23,6 +26,9 @@ public class UdpGameServer
         FindClients();
     }
 
+    /// <summary>
+    ///  Sets the listening port for the game server.
+    /// </summary>
     private void SetPort()
     {
         int result = 0;
@@ -40,6 +46,9 @@ public class UdpGameServer
         }
     }
 
+    /// <summary>
+    ///  If true, prints "last time in ms" to the console.
+    /// </summary>
     private void SetMsPrint()
     {
         bool result = false;
@@ -61,7 +70,9 @@ public class UdpGameServer
         }
     }
 
-
+    /// <summary>
+    ///  Listent on set port for new clients, add them to the client list and start a new thread for the client pair.
+    /// </summary>
     private void FindClients()
     {
         Console.WriteLine("Server is Running..");
@@ -106,6 +117,11 @@ public class UdpGameServer
         }
     }
 
+    /// <summary>
+    /// Sends messages between two clients
+    /// </summary>
+    /// <param name="player1Index">index in Clients List where the first player is.</param>
+    /// <param name="player2Index">index in Clients List where the second player is.</param>
     private void SendLoop(int player1Index, int player2Index)
     {
         (int index, UdpClient client, IPEndPoint ipEndPoint) valueTuple =
@@ -163,6 +179,9 @@ public class UdpGameServer
         }
     }
 
+    /// <summary>
+    ///  Invokes the ClientCountChanged event.
+    /// </summary>
     private void OnClientCountChanged()
     {
         ClientCountChanged?.Invoke(this, new ClientCountChangedEventArgs(CurrentCientCount));
