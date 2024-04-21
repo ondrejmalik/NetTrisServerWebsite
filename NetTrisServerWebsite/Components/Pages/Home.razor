@@ -5,29 +5,54 @@
 @page "/"
 
 <PageTitle>Home</PageTitle>
+<div id="container">
+    <h1>NetTris Dashboard</h1>
+    <h2>@localCount players connected</h2>
+</div>
+<style>
+    #container {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translate(-50%);
+        background: #20202a;
+        padding: 25px;
+        border-radius: 40px;
+    }
 
-<h1>@localCount Players Connected</h1>
-
+    h1 {
+        text-align: center;
+        color: white;
+        font-size: 3em;
+        text-decoration-line: underline;
+    }
+    h2 {
+        text-align: center;
+        color: white;
+        font-size: 2em;
+        
+    }
+</style>
 @code
 {
-    private HubConnection? hubConnection;
-    int localCount;
+private HubConnection? hubConnection;
+int localCount;
 
-    protected override async void OnInitialized()
-    {
-        UdpGameServer.ClientCountChanged += handleUserCountChanged;
-        hubConnection = new HubConnectionBuilder().WithUrl(NavigationManager.ToAbsoluteUri("/count")).Build();
-        hubConnection.On<int>("ReceiveMessage", (count) =>
-        {
-            Console.WriteLine(count);
-            localCount = count;
-            InvokeAsync(StateHasChanged);
-        });
-        await hubConnection.StartAsync();
-    }
+protected override async void OnInitialized()
+{
+UdpGameServer.ClientCountChanged += handleUserCountChanged;
+hubConnection = new HubConnectionBuilder().WithUrl(NavigationManager.ToAbsoluteUri("/count")).Build();
+hubConnection.On<int>("ReceiveMessage", (count) =>
+{
+Console.WriteLine($"{count} players connected");
+localCount = count;
+InvokeAsync(StateHasChanged);
+});
+await hubConnection.StartAsync();
+}
 
-    private void handleUserCountChanged(object? sender, ClientCountChangedEventArgs e)
-    {
-        hubConnection.SendAsync("SendMessage", e.NewCount);
-    }
+private void handleUserCountChanged(object? sender, ClientCountChangedEventArgs e)
+{
+hubConnection.SendAsync("SendMessage", e.NewCount);
+}
 }
