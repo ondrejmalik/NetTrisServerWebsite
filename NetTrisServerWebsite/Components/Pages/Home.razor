@@ -1,0 +1,33 @@
+﻿@rendermode InteractiveServer
+@using BlazorApp2.Components.Pages
+@using Microsoft.AspNetCore.SignalR.Client
+@inject NavigationManager NavigationManager
+@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>@localCount Players Connected</h1>
+
+@code
+{
+    private HubConnection? hubConnection;
+    int localCount;
+
+    protected override async void OnInitialized()
+    {
+        UdpGameServer.ClientCountChanged += handleUserCountChanged;
+        hubConnection = new HubConnectionBuilder().WithUrl(NavigationManager.ToAbsoluteUri("/count")).Build();
+        hubConnection.On<int>("ReceiveMessage", (count) =>
+        {
+            Console.WriteLine(count);
+            localCount = count;
+            InvokeAsync(StateHasChanged);
+        });
+        await hubConnection.StartAsync();
+    }
+
+    private void handleUserCountChanged(object? sender, ClientCountChangedEventArgs e)
+    {
+        hubConnection.SendAsync("SendMessage", e.NewCount);
+    }
+}

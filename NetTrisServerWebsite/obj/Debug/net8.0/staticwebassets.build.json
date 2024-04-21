@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "jzQLzBgedYDvz1R0E2iiIip0VpGJmxqZ8paFfnUIjrw=",
+  "Source": "NetTrisServerWebsite",
+  "BasePath": "_content/NetTrisServerWebsite",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "NetTrisServerWebsite\\wwwroot",
+      "Source": "NetTrisServerWebsite",
+      "ContentRoot": "A:\\Projects\\NetTrisServerWebsite\\NetTrisServerWebsite\\wwwroot\\",
+      "BasePath": "_content/NetTrisServerWebsite",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "A:\\Projects\\NetTrisServerWebsite\\NetTrisServerWebsite\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NetTrisServerWebsite.styles.css",
+      "SourceId": "NetTrisServerWebsite",
+      "SourceType": "Computed",
+      "ContentRoot": "A:\\Projects\\NetTrisServerWebsite\\NetTrisServerWebsite\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/NetTrisServerWebsite",
+      "RelativePath": "NetTrisServerWebsite.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "A:\\Projects\\NetTrisServerWebsite\\NetTrisServerWebsite\\obj\\Debug\\net8.0\\scopedcss\\bundle\\NetTrisServerWebsite.styles.css"
+    },
+    {
+      "Identity": "A:\\Projects\\NetTrisServerWebsite\\NetTrisServerWebsite\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NetTrisServerWebsite.bundle.scp.css",
+      "SourceId": "NetTrisServerWebsite",
+      "SourceType": "Computed",
+      "ContentRoot": "A:\\Projects\\NetTrisServerWebsite\\NetTrisServerWebsite\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/NetTrisServerWebsite",
+      "RelativePath": "NetTrisServerWebsite.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "A:\\Projects\\NetTrisServerWebsite\\NetTrisServerWebsite\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NetTrisServerWebsite.bundle.scp.css"
+    },
+    {
+      "Identity": "A:\\Projects\\NetTrisServerWebsite\\NetTrisServerWebsite\\wwwroot\\app.css",
+      "SourceId": "NetTrisServerWebsite",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\Projects\\NetTrisServerWebsite\\NetTrisServerWebsite\\wwwroot\\",
+      "BasePath": "_content/NetTrisServerWebsite",
+      "RelativePath": "app.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    }
+  ]
+}
